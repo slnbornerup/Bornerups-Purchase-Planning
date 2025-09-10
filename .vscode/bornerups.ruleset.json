@@ -1,0 +1,30 @@
+{
+    "name": "Bornerups Ruleset",
+    "description": "This allows us to fix the issues in a prioritized order.",
+    "rules": [
+        {
+            "id": "AA0215",
+            "action": "None",
+            "justification": "Follow [the style guide](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-bestpracticesforalcode#file-naming) about the best practices for naming"
+        },
+
+        {
+            "id": "AA0139",
+            "action": "Error",
+            "justification": "Do not assign a text to a target with smaller size. POTENTIAL RUNTIME ERROR."
+        },
+        {
+            "id": "AA0462",
+            "action": "Error",
+            "justification": "The CalcDate should only be used with DateFormula variables. Alternatively the string should be enclosed using the <> symbols. POTENTIAL RUNTIME ERROR."
+        },
+        {
+            "id": "AA0218",
+            "action": "None",
+            "justification": "You must write a tooltip in the Tooltip property for all controls of type Action and Field that exist on page objects."
+        }
+        
+    ]
+}
+
+
