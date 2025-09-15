@@ -2,13 +2,13 @@ page 80402 "BOR Req. Work. Loc. FactBox"
 {
     Caption = 'Location Details', Comment = 'DAN="Varedetaljer"';
     PageType = CardPart;
-    SourceTable = "Stockkeeping Unit";
+    SourceTable = Item;
 
     layout
     {
         area(content)
         {
-            field("No."; Rec."Item No.")
+            field("No."; Rec."No.")
             {
                 Caption = 'Item No.', Comment = 'DAN="Varenr."';
                 ApplicationArea = All;
@@ -100,8 +100,10 @@ page 80402 "BOR Req. Work. Loc. FactBox"
     begin
 
         // Refactor - Anette dont think that it is relevant with earlier purchases
-        Item.GET(Rec."Item No.");
+        Item.GET(Rec."No.");
         Item.SETRANGE("Date Filter");
+        Item.SetRange("Location Filter");
+
         Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
         Qty[1, 1] := Item."Purchases (Qty.)";
         Qty[1, 2] := Item."Sales (Qty.)";
