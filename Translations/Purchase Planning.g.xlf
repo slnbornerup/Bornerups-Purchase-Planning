@@ -288,6 +288,16 @@
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr6_2 - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 2171299625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Viser den gældende pris fra Purchase Prices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control CurrentPurchasePrice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 2171299625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Current Purchase Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control CurrentPurchasePrice - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>

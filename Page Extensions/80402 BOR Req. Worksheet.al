@@ -17,6 +17,11 @@ pageextension 80402 "BOR Req. Worksheet" extends "Req. Worksheet"
                 SubPageLink = "No." = field("No."), "Location filter" = field("Location Code");
                 Visible = true;
             }
+
+        }
+        modify("Price Calculation Method")
+        {
+            Visible = false;
         }
     }
 }
