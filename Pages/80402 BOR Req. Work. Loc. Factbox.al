@@ -50,41 +50,72 @@ page 80402 "BOR Req. Work. Loc. FactBox"
                 ApplicationArea = all;
             }
 
-            group(Salg)
+            group(Sum)
             {
-                Caption = 'Sale', comment = 'DAN="Salg"';
+                Caption = 'Total Sales', comment = 'DAN="Salg"';
 
-                field(QtyTextArr1_2; QtyTextArr[1, 2])
+                field(QtyTextArr1_2; QtyTextArr[1, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
-                field(QtyTextArr2_2; QtyTextArr[2, 2])
+
+
+
+            }
+            group(ThisYear)
+            {
+                Caption = 'This Year', comment = 'DAN="I år"';
+                field(QtyTextArr6_2; QtyTextArr[6, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
-                field(QtyTextArr3_2; QtyTextArr[3, 2])
+                field(QtyTextArr7_2; QtyTextArr[7, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
-                field(QtyTextArr4_2; QtyTextArr[4, 2])
+                field(QtyTextArr8_2; QtyTextArr[8, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
-                field(QtyTextArr5_2; QtyTextArr[5, 2])
+                field(QtyTextArr9_2; QtyTextArr[9, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
-                field(QtyTextArr6_2; QtyTextArr[6, 2])
+            }
+
+            group(LastYear)
+            {
+                Caption = 'Last Year', comment = 'DAN="Sidste år"';
+
+                field(QtyTextArr2_2; QtyTextArr[2, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr3_2; QtyTextArr[3, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr4_2; QtyTextArr[4, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr5_2; QtyTextArr[5, 1])
                 {
                     caption = '', comment = 'DAN=" "';
                     ApplicationArea = All;
@@ -99,73 +130,93 @@ page 80402 "BOR Req. Work. Loc. FactBox"
     trigger OnAfterGetCurrRecord()
     begin
 
-        // Refactor - Anette dont think that it is relevant with earlier purchases
+
         Item.GET(Rec."No.");
         Item.SETRANGE("Date Filter");
         Item.SetRange("Location Filter");
 
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
-        Qty[1, 1] := Item."Purchases (Qty.)";
-        Qty[1, 2] := Item."Sales (Qty.)";
+        Item.CALCFIELDS("Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
+
+        Qty[1, 1] := Item."Sales (Qty.)";
         QtyText[1] := 'I alt';
+
         StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
         EndDate := CALCDATE('<CY>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)");
-        Qty[2, 1] := Item."Purchases (Qty.)";
-        Qty[2, 2] := Item."Sales (Qty.)";
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[2, 1] := Item."Sales (Qty.)";
         QtyText[2] := FORMAT(StartDate, 0, '<Year4>');
+
+        StartDate := CALCDATE('<-1M>>', StartDate);
+        EndDate := CALCDATE('<CM>', StartDate);
+        Item.SETRANGE("Date Filter", StartDate, EndDate);
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[3, 1] := Item."Sales (Qty.)";
+        QtyText[3] := FORMAT(StartDate, 0, '<Month Text>');
+
+        StartDate := CALCDATE('<-1M>', StartDate);
+        EndDate := CALCDATE('<CM>', StartDate);
+        Item.SETRANGE("Date Filter", StartDate, EndDate);
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[4, 1] := Item."Sales (Qty.)";
+        QtyText[4] := FORMAT(StartDate, 0, '<Month Text>');
+
+        StartDate := CALCDATE('<-1M>', StartDate);
+        EndDate := CALCDATE('<CM>', StartDate);
+        Item.SETRANGE("Date Filter", StartDate, EndDate);
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[5, 1] := Item."Sales (Qty.)";
+        QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
+
         StartDate := CALCDATE('<-CY>', WORKDATE());
         EndDate := CALCDATE('<CY>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)");
-        Qty[3, 1] := Item."Purchases (Qty.)";
-        Qty[3, 2] := Item."Sales (Qty.)";
-        QtyText[3] := FORMAT(StartDate, 0, '<Year4>');
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[6, 1] := Item."Sales (Qty.)";
+        QtyText[6] := FORMAT(StartDate, 0, '<Year4>');
+
         StartDate := CALCDATE('<-CM>', WORKDATE());
         EndDate := CALCDATE('<CM>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)");
-        Qty[6, 1] := Item."Purchases (Qty.)";
-        Qty[6, 2] := Item."Sales (Qty.)";
-        QtyText[6] := FORMAT(StartDate, 0, '<Month Text>');
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[7, 1] := Item."Sales (Qty.)";
+        QtyText[7] := FORMAT(StartDate, 0, '<Month Text>');
+
         StartDate := CALCDATE('<-1M>', StartDate);
         EndDate := CALCDATE('<CM>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)");
-        Qty[5, 1] := Item."Purchases (Qty.)";
-        Qty[5, 2] := Item."Sales (Qty.)";
-        QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[8, 1] := Item."Sales (Qty.)";
+        QtyText[8] := FORMAT(StartDate, 0, '<Month Text>');
+
         StartDate := CALCDATE('<-1M>', StartDate);
         EndDate := CALCDATE('<CM>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.CALCFIELDS("Purchases (Qty.)", "Sales (Qty.)");
-        Qty[4, 1] := Item."Purchases (Qty.)";
-        Qty[4, 2] := Item."Sales (Qty.)";
-        QtyText[4] := FORMAT(StartDate, 0, '<Month Text>');
-        QtyTextArr[1, 2] := COPYSTR(Trailing(QtyText[1], 30, ' ') + Leading(FORMAT(Qty[1, 2]), 30, ' '), 1, 60);
-        QtyTextArr[2, 2] := COPYSTR(Trailing(QtyText[2], 30, ' ') + Leading(FORMAT(Qty[2, 2]), 30, ' '), 1, 60);
-        QtyTextArr[3, 2] := COPYSTR(Trailing(QtyText[3], 30, ' ') + Leading(FORMAT(Qty[3, 2]), 30, ' '), 1, 60);
-        QtyTextArr[4, 2] := COPYSTR(Trailing(QtyText[4], 30, ' ') + Leading(FORMAT(Qty[4, 2]), 30, ' '), 1, 60);
-        QtyTextArr[5, 2] := COPYSTR(Trailing(QtyText[5], 30, ' ') + Leading(FORMAT(Qty[5, 2]), 30, ' '), 1, 60);
-        QtyTextArr[6, 2] := COPYSTR(Trailing(QtyText[6], 30, ' ') + Leading(FORMAT(Qty[6, 2]), 30, ' '), 1, 60);
-        QtyTextArr[1, 1] := COPYSTR(Trailing(QtyText[1], 30, ' ') + Leading(FORMAT(Qty[1, 1]), 30, ' '), 1, 60);
-        QtyTextArr[2, 1] := COPYSTR(Trailing(QtyText[2], 30, ' ') + Leading(FORMAT(Qty[2, 1]), 30, ' '), 1, 60);
-        QtyTextArr[3, 1] := COPYSTR(Trailing(QtyText[3], 30, ' ') + Leading(FORMAT(Qty[3, 1]), 30, ' '), 1, 60);
-        QtyTextArr[4, 1] := COPYSTR(Trailing(QtyText[4], 30, ' ') + Leading(FORMAT(Qty[4, 1]), 30, ' '), 1, 60);
-        QtyTextArr[5, 1] := COPYSTR(Trailing(QtyText[5], 30, ' ') + Leading(FORMAT(Qty[5, 1]), 30, ' '), 1, 60);
-        QtyTextArr[6, 1] := COPYSTR(Trailing(QtyText[6], 30, ' ') + Leading(FORMAT(Qty[6, 1]), 30, ' '), 1, 60);
+        Item.CALCFIELDS("Sales (Qty.)");
+        Qty[9, 1] := Item."Sales (Qty.)";
+        QtyText[9] := FORMAT(StartDate, 0, '<Month Text>');
+
+        QtyTextArr[1, 1] := COPYSTR(QtyText[1] + Leading(FORMAT(Qty[1, 1]), 30, ' '), 1, 60);
+        QtyTextArr[2, 1] := COPYSTR(QtyText[2] + Leading(FORMAT(Qty[2, 1]), 30, ' '), 1, 60);
+        QtyTextArr[3, 1] := COPYSTR(QtyText[3] + Leading(FORMAT(Qty[3, 1]), 30, ' '), 1, 60);
+        QtyTextArr[4, 1] := COPYSTR(QtyText[4] + Leading(FORMAT(Qty[4, 1]), 30, ' '), 1, 60);
+        QtyTextArr[5, 1] := COPYSTR(QtyText[5] + Leading(FORMAT(Qty[5, 1]), 30, ' '), 1, 60);
+        QtyTextArr[6, 1] := COPYSTR(QtyText[6] + Leading(FORMAT(Qty[6, 1]), 30, ' '), 1, 60);
+        QtyTextArr[7, 1] := COPYSTR(QtyText[7] + Leading(FORMAT(Qty[7, 1]), 30, ' '), 1, 60);
+        QtyTextArr[8, 1] := COPYSTR(QtyText[8] + Leading(FORMAT(Qty[8, 1]), 30, ' '), 1, 60);
+        QtyTextArr[9, 1] := COPYSTR(QtyText[9] + Leading(FORMAT(Qty[9, 1]), 30, ' '), 1, 60);
+
     end;
 
     var
         Item: Record Item;
-        Qty: array[6, 2] of Decimal;
-        QtyText: array[6] of Text[30];
+        Qty: array[9, 1] of Decimal;
+        QtyText: array[9] of Text[30];
         StartDate: Date;
         EndDate: Date;
         //StartDateArr: array [6] of Date;
         Text001: Label 'Tekstens længde %1 er længere end den tilladte længde %2';
-        QtyTextArr: array[6, 2] of Text[60];
+        QtyTextArr: array[9, 1] of Text[60];
 
     local procedure ShowDetails()
     begin
@@ -192,3 +243,4 @@ page 80402 "BOR Req. Work. Loc. FactBox"
         exit(PADSTR(String, Length, Trailchar));
     end;
 }
+

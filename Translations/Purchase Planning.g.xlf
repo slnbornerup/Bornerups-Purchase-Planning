@@ -38,6 +38,51 @@
           <note from="Developer" annotates="general" priority="2">DAN="Lager"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Inventory - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 352704741 - Control 1219381855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Year</source>
+          <note from="Developer" annotates="general" priority="2">DAN="Sidste år"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control LastYear - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 2732493241 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr2_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 2732493241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr2_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 2118512530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr3_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 2118512530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr3_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 1555908779 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr4_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 1555908779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr4_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 1148299076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr5_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 1148299076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr5_2 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 352704741 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a number to identify the item. You can use ranges of item numbers to logically group products or to imply information about them. Or use simple numbers and item categories to group items.</source>
           <note from="Developer" annotates="general" priority="2">DAN="Angiver et nummer for at identificere varen. Du kan bruge intervaller af varenumre til logisk at gruppere produkter eller til at antyde oplysninger om dem. Eller brug simple tal og varekategorier til at gruppere varer."</note>
@@ -88,10 +133,10 @@
           <note from="Developer" annotates="general" priority="2">DAN="Genbestillings antal"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Reorder Quantity - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1039744715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sale</source>
+        <trans-unit id="Page 352704741 - Control 3502818357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Sales</source>
           <note from="Developer" annotates="general" priority="2">DAN="Salg"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Salg - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Sum - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 352704741 - Control 2655520288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Some Quantity</source>
@@ -103,45 +148,10 @@
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr1_2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 352704741 - Control 2732493241 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr2_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 2732493241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr2_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 2118512530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr3_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 2118512530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr3_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1555908779 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr4_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1555908779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr4_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1148299076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr5_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1148299076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr5_2 - Property Caption</note>
+        <trans-unit id="Page 352704741 - Control 1290630539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Year</source>
+          <note from="Developer" annotates="general" priority="2">DAN="I år"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control ThisYear - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 352704741 - Control 482941405 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Some Quantity</source>
@@ -152,6 +162,36 @@
           <source></source>
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr6_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 4163927990 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr7_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 4163927990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr7_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 395690031 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr8_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 395690031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr8_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 338457288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr9_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 352704741 - Control 338457288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control QtyTextArr9_2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3339141720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Details</source>
@@ -172,6 +212,51 @@
           <source>Inventory</source>
           <note from="Developer" annotates="general" priority="2">DAN="Lager"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 1219381855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Year</source>
+          <note from="Developer" annotates="general" priority="2">DAN="Sidste år"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control LastYear - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 2732493241 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr2_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 2732493241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr2_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 2118512530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr3_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 2118512530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr3_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 1555908779 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr4_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 1555908779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr4_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 1148299076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr5_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 1148299076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr5_2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3339141720 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies a number to identify the item. You can use ranges of item numbers to logically group products or to imply information about them. Or use simple numbers and item categories to group items.</source>
@@ -223,10 +308,10 @@
           <note from="Developer" annotates="general" priority="2">DAN="Genbestillings antal"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Reorder Quantity - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1039744715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sale</source>
+        <trans-unit id="Page 3339141720 - Control 3502818357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Sales</source>
           <note from="Developer" annotates="general" priority="2">DAN="Salg"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Salg - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Sum - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3339141720 - Control 2655520288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Some Quantity</source>
@@ -238,45 +323,10 @@
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr1_2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 2732493241 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr2_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 2732493241 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr2_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 2118512530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr3_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 2118512530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr3_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1555908779 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr4_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1555908779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr4_2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1148299076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Some Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr5_2 - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1148299076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source></source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr5_2 - Property Caption</note>
+        <trans-unit id="Page 3339141720 - Control 1290630539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Year</source>
+          <note from="Developer" annotates="general" priority="2">DAN="I år"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control ThisYear - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3339141720 - Control 482941405 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Some Quantity</source>
@@ -288,15 +338,85 @@
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr6_2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2349464279 - Control 2171299625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
-          <source>Viser den gældende pris fra Purchase Prices.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control CurrentPurchasePrice - Property ToolTip</note>
+        <trans-unit id="Page 3339141720 - Control 4163927990 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr7_2 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2349464279 - Control 2171299625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
-          <source>Current Purchase Price</source>
+        <trans-unit id="Page 3339141720 - Control 4163927990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr7_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 395690031 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr8_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 395690031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr8_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 338457288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Some Quantity</source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr9_2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3339141720 - Control 338457288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr9_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 4060897369 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Shows the number of vendors.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control CurrentPurchasePrice - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Vendor Count - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 4060897369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Vendor Count</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Vendor Count - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 2358052727 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Shows the discount from the vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control DiscountPercentage - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 2358052727 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Line Discount Percentage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control DiscountPercentage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 1592555183 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Shows the Minimum Quantity from the vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control MinimumQuantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 1592555183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Minimum Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control MinimumQuantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 3635338911 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Show the current price from the vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control Price - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 3955711665 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Shows the Unit of Measure from the vendor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control UnitOfMeasure - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2349464279 - Control 3955711665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2341912694">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Vendor Catalog - Control UnitOfMeasure - Property Caption</note>
         </trans-unit>
       </group>
     </body>

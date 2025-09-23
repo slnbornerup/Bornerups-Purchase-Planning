@@ -15,14 +15,6 @@
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
             "schemaUpdateMode": "ForceSync"
-        },
-        {
-            "name": "AL: Generated Download Symbols request",
-            "request": "launch",
-            "type": "al",
-            "environmentType": "Sandbox",
-            "environmentName": "Sandbox_DEV",
-            "tenant": "bc92ba25-baab-4379-ae84-e3c852df3a6c"
         }
     ]
 }
