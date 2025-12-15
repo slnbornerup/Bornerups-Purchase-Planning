@@ -14,7 +14,7 @@ pageextension 80402 "BOR Req. Worksheet" extends "Req. Worksheet"
             part(BORItemDetailsLocation; "BOR Req. Work. Loc. FactBox")
             {
                 ApplicationArea = All;
-                SubPageLink = "No." = field("No."), "Location filter" = field("Location Code");
+                SubPageLink = "No." = field("No.");
                 Visible = true;
             }
 
@@ -24,4 +24,9 @@ pageextension 80402 "BOR Req. Worksheet" extends "Req. Worksheet"
             Visible = false;
         }
     }
+
+    trigger OnAfterGetCurrRecord()
+    begin
+        CurrPage.BORItemDetailsLocation.Page.SetLocation(Rec."Location Code");
+    end;
 }

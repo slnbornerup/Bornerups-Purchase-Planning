@@ -67,35 +67,6 @@ page 80401 "BOR Req. Worksheet FactBox"
             group(ThisYear)
             {
                 Caption = 'This Year', comment = 'DAN="I år"';
-                field(QtyTextArr6_2; QtyTextArr[6, 1])
-                {
-                    caption = '', comment = 'DAN=" "';
-                    ApplicationArea = All;
-                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
-                }
-                field(QtyTextArr7_2; QtyTextArr[7, 1])
-                {
-                    caption = '', comment = 'DAN=" "';
-                    ApplicationArea = All;
-                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
-                }
-                field(QtyTextArr8_2; QtyTextArr[8, 1])
-                {
-                    caption = '', comment = 'DAN=" "';
-                    ApplicationArea = All;
-                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
-                }
-                field(QtyTextArr9_2; QtyTextArr[9, 1])
-                {
-                    caption = '', comment = 'DAN=" "';
-                    ApplicationArea = All;
-                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
-                }
-            }
-
-            group(LastYear)
-            {
-                Caption = 'Last Year', comment = 'DAN="Sidste år"';
 
                 field(QtyTextArr2_2; QtyTextArr[2, 1])
                 {
@@ -122,6 +93,37 @@ page 80401 "BOR Req. Worksheet FactBox"
                     ToolTip = 'Some Quantity', comment = 'DAN=" "';
                 }
             }
+
+            group(LastYear)
+            {
+                Caption = 'Last Year', comment = 'DAN="Sidste år"';
+
+                field(QtyTextArr6_2; QtyTextArr[6, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr7_2; QtyTextArr[7, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr8_2; QtyTextArr[8, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+                field(QtyTextArr9_2; QtyTextArr[9, 1])
+                {
+                    caption = '', comment = 'DAN=" "';
+                    ApplicationArea = All;
+                    ToolTip = 'Some Quantity', comment = 'DAN=" "';
+                }
+
+            }
         }
     }
     actions
@@ -138,15 +140,15 @@ page 80401 "BOR Req. Worksheet FactBox"
         Qty[1, 1] := Item."Sales (Qty.)";
         QtyText[1] := 'I alt';
 
-        StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
+        StartDate := CALCDATE('<-CY>', WORKDATE());
         EndDate := CALCDATE('<CY>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
         Item.CALCFIELDS("Sales (Qty.)");
         Qty[2, 1] := Item."Sales (Qty.)";
         QtyText[2] := FORMAT(StartDate, 0, '<Year4>');
 
-        StartDate := CALCDATE('<-1M>>', StartDate);
-        EndDate := CALCDATE('<CM>', StartDate);
+        StartDate := CALCDATE('<-CM>', EndDate);
+        EndDate := CalcDate('<CM>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
         Item.CALCFIELDS("Sales (Qty.)");
         Qty[3, 1] := Item."Sales (Qty.)";
@@ -166,14 +168,16 @@ page 80401 "BOR Req. Worksheet FactBox"
         Qty[5, 1] := Item."Sales (Qty.)";
         QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
 
-        StartDate := CALCDATE('<-CY>', WORKDATE());
+        // last year
+
+        StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
         EndDate := CALCDATE('<CY>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
         Item.CALCFIELDS("Sales (Qty.)");
         Qty[6, 1] := Item."Sales (Qty.)";
         QtyText[6] := FORMAT(StartDate, 0, '<Year4>');
 
-        StartDate := CALCDATE('<-CM>', WORKDATE());
+        StartDate := CALCDATE('<-CM>', EndDate);
         EndDate := CALCDATE('<CM>', StartDate);
         Item.SETRANGE("Date Filter", StartDate, EndDate);
         Item.CALCFIELDS("Sales (Qty.)");
