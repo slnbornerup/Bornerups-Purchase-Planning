@@ -14,7 +14,7 @@ pageextension 80402 "BOR Req. Worksheet" extends "Req. Worksheet"
             part(BORItemDetailsLocation; "BOR Req. Work. Loc. FactBox")
             {
                 ApplicationArea = All;
-                SubPageLink = "No." = field("No.");
+                SubPageLink = "No." = field("No."), "Location Filter" = field("Location Code");
                 Visible = true;
             }
 

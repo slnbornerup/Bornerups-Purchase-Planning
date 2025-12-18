@@ -113,26 +113,6 @@
           <note from="Developer" annotates="general" priority="2">DAN="Antal i salgsordre"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Qty. on Sales Order - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 352704741 - Control 3345871191 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a stock quantity that sets the inventory below the level that you must replenish the item.</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Reorder Point - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 3345871191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reorder Point</source>
-          <note from="Developer" annotates="general" priority="2">DAN="Genbestillingspunkt"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Reorder Point - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1141850366 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a standard lot size quantity to be used for all order proposals.</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Reorder Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 352704741 - Control 1141850366 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reorder Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN="Genbestillings antal"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Work. Loc. FactBox - Control Reorder Quantity - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 352704741 - Control 3502818357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Sales</source>
           <note from="Developer" annotates="general" priority="2">DAN="Salg"</note>
@@ -288,26 +268,6 @@
           <note from="Developer" annotates="general" priority="2">DAN="Antal i salgsordre"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Qty. on Sales Order - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 3345871191 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a stock quantity that sets the inventory below the level that you must replenish the item.</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Reorder Point - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 3345871191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reorder Point</source>
-          <note from="Developer" annotates="general" priority="2">DAN="Genbestillingspunkt"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Reorder Point - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1141850366 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies a standard lot size quantity to be used for all order proposals.</source>
-          <note from="Developer" annotates="general" priority="2">DAN=" "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Reorder Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3339141720 - Control 1141850366 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Reorder Quantity</source>
-          <note from="Developer" annotates="general" priority="2">DAN="Genbestillings antal"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control Reorder Quantity - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3339141720 - Control 3502818357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Sales</source>
           <note from="Developer" annotates="general" priority="2">DAN="Salg"</note>
@@ -367,6 +327,31 @@
           <source></source>
           <note from="Developer" annotates="general" priority="2">DAN=" "</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BOR Req. Worksheet FactBox - Control QtyTextArr5_2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 1356249118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Specifies a quantity that you want to use as a maximum inventory level.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Maximum Inventory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 3345871191 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Specifies a stock quantity that sets the inventory below the level that you must replenish the item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Reorder Point - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 1141850366 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Specifies a standard lot size quantity to be used for all order proposals.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Reorder Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 3041858163 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Specifies the reordering policy that is used to calculate the lot size per planning period (time bucket).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Reordering Policy - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2212922250 - Control 2639399489 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
+          <source>Specifies a quantity of stock to have in inventory to protect against supply-and-demand fluctuations during replenishment lead time.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BOR Item Rep. FactBox - Control Safety Stock Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2212922250 - Control 4060897369 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 566090924">
           <source>Shows the number of vendors.</source>

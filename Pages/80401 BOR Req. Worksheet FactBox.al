@@ -37,18 +37,7 @@ page 80401 "BOR Req. Worksheet FactBox"
                 ToolTip = 'Specifies how many units of the item are allocated to sales orders, meaning listed on outstanding sales orders lines.', Comment = 'DAN="Angiver, hvor mange enheder af varen, der er allokeret til salgsordrer, dvs. angivet på udestående salgsordrelinjer."';
                 ApplicationArea = all;
             }
-            field("Reorder Point"; Rec."Reorder Point")
-            {
-                Caption = 'Reorder Point', Comment = 'DAN="Genbestillingspunkt"';
-                ToolTip = 'Specifies a stock quantity that sets the inventory below the level that you must replenish the item.', Comment = 'DAN=" "';
-                ApplicationArea = all;
-            }
-            field("Reorder Quantity"; Rec."Reorder Quantity")
-            {
-                Caption = 'Reorder Quantity', Comment = 'DAN="Genbestillings antal"';
-                ToolTip = 'Specifies a standard lot size quantity to be used for all order proposals.', Comment = 'DAN=" "';
-                ApplicationArea = all;
-            }
+
 
             group(Sum)
             {
