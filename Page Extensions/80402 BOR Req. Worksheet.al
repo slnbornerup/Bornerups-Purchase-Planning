@@ -27,6 +27,10 @@ pageextension 80402 "BOR Req. Worksheet" extends "Req. Worksheet"
 
     trigger OnAfterGetCurrRecord()
     begin
-        CurrPage.BORItemDetailsLocation.Page.SetLocation(Rec."Location Code");
+        CurrPage.BORItemDetails.Page.SetLocation(Rec."Location Code", Rec."Variant Code");
+        CurrPage.BORItemDetailsLocation.Page.SetLocation(Rec."Location Code", Rec."Variant Code");
+        CurrPage.BORItemDetails.Page.Update();
+        CurrPage.BORItemDetailsLocation.Page.Update();
+        // can i repaint the subpages here ?
     end;
 }

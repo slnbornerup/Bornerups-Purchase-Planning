@@ -19,7 +19,7 @@ page 80402 "BOR Req. Work. Loc. FactBox"
                     ShowDetails();
                 end;
             }
-            field(Inventory; Rec.Inventory)
+            field(Inventory; Inventory)
             {
                 Caption = 'Inventory', Comment = 'DAN="Lager"';
                 ApplicationArea = All;
@@ -120,82 +120,167 @@ page 80402 "BOR Req. Work. Loc. FactBox"
     trigger OnAfterGetCurrRecord()
     begin
 
-        //Stockkeeping Unit (5700)
+        // if location is not set, then use item table
 
-        Item.GET(Rec."No.");
-        Item.SETRANGE("Date Filter");
-        Item.SetRange("Location Filter", Location);
 
-        Item.CALCFIELDS("Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
 
-        Qty[1, 1] := Item."Sales (Qty.)";
-        QtyText[1] := 'I alt';
+        if Location = '' then begin
+            recItem.GET(Rec."No.");
+            recItem.SETRANGE("Date Filter");
+            recItem.CALCFIELDS("Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
 
-        StartDate := CALCDATE('<-CY>', WORKDATE());
-        EndDate := CALCDATE('<CY>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[2, 1] := Item."Sales (Qty.)";
-        QtyText[2] := FORMAT(StartDate, 0, '<Year4>');
+            Inventory := recItem.Inventory;
 
-        StartDate := CALCDATE('<-CM>', EndDate);
-        EndDate := CalcDate('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[3, 1] := Item."Sales (Qty.)";
-        QtyText[3] := FORMAT(StartDate, 0, '<Month Text>');
+            Qty[1, 1] := recItem."Sales (Qty.)";
+            QtyText[1] := 'I alt';
 
-        StartDate := CALCDATE('<-1M>', StartDate);
-        EndDate := CALCDATE('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[4, 1] := Item."Sales (Qty.)";
-        QtyText[4] := FORMAT(StartDate, 0, '<Month Text>');
+            StartDate := CALCDATE('<-CY>', WORKDATE());
+            EndDate := CALCDATE('<CY>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[2, 1] := recItem."Sales (Qty.)";
+            QtyText[2] := FORMAT(StartDate, 0, '<Year4>');
 
-        StartDate := CALCDATE('<-1M>', StartDate);
-        EndDate := CALCDATE('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[5, 1] := Item."Sales (Qty.)";
-        QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
+            StartDate := CALCDATE('<-CM>', EndDate);
+            EndDate := CalcDate('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[3, 1] := recItem."Sales (Qty.)";
+            QtyText[3] := FORMAT(StartDate, 0, '<Month Text>');
 
-        // last year
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[4, 1] := recItem."Sales (Qty.)";
+            QtyText[4] := FORMAT(StartDate, 0, '<Month Text>');
 
-        StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
-        EndDate := CALCDATE('<CY>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[6, 1] := Item."Sales (Qty.)";
-        QtyText[6] := FORMAT(StartDate, 0, '<Year4>');
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[5, 1] := recItem."Sales (Qty.)";
+            QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
 
-        StartDate := CALCDATE('<-CM>', EndDate);
-        EndDate := CALCDATE('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[7, 1] := Item."Sales (Qty.)";
-        QtyText[7] := FORMAT(StartDate, 0, '<Month Text>');
+            // last year
 
-        StartDate := CALCDATE('<-1M>', StartDate);
-        EndDate := CALCDATE('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[8, 1] := Item."Sales (Qty.)";
-        QtyText[8] := FORMAT(StartDate, 0, '<Month Text>');
+            StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
+            EndDate := CALCDATE('<CY>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[6, 1] := recItem."Sales (Qty.)";
+            QtyText[6] := FORMAT(StartDate, 0, '<Year4>');
 
-        StartDate := CALCDATE('<-1M>', StartDate);
-        EndDate := CALCDATE('<CM>', StartDate);
-        Item.SETRANGE("Date Filter", StartDate, EndDate);
-        Item.SetRange("Location Filter", Location);
-        Item.CALCFIELDS("Sales (Qty.)");
-        Qty[9, 1] := Item."Sales (Qty.)";
-        QtyText[9] := FORMAT(StartDate, 0, '<Month Text>');
+            StartDate := CALCDATE('<-CM>', EndDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[7, 1] := recItem."Sales (Qty.)";
+            QtyText[7] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[8, 1] := recItem."Sales (Qty.)";
+            QtyText[8] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[9, 1] := recItem."Sales (Qty.)";
+            QtyText[9] := FORMAT(StartDate, 0, '<Month Text>');
+
+        end
+        else begin
+
+            recItem.GET(Rec."No.");
+            recItem.SETRANGE("Date Filter");
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)", Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
+
+            recStockKeepingUnit.SETRANGE("Item No.", Rec."No.");
+            recStockKeepingUnit.SetRange("Location Code", Location);
+            recStockKeepingUnit.SetRange("Variant Code", VariantCode);
+
+
+            if recStockKeepingUnit.FindFirst() then begin
+                recStockKeepingUnit.CALCFIELDS(Inventory, "Qty. on Purch. Order", "Qty. on Sales Order");
+                // hvorfor er denne altid tom ?
+                Inventory := recStockKeepingUnit.Inventory;
+            end;
+
+            Qty[1, 1] := recItem."Sales (Qty.)";
+            QtyText[1] := 'I alt';
+
+            StartDate := CALCDATE('<-CY>', WORKDATE());
+            EndDate := CALCDATE('<CY>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[2, 1] := recItem."Sales (Qty.)";
+            QtyText[2] := FORMAT(StartDate, 0, '<Year4>');
+
+            StartDate := CALCDATE('<-CM>', EndDate);
+            EndDate := CalcDate('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[3, 1] := recItem."Sales (Qty.)";
+            QtyText[3] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[4, 1] := recItem."Sales (Qty.)";
+            QtyText[4] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[5, 1] := recItem."Sales (Qty.)";
+            QtyText[5] := FORMAT(StartDate, 0, '<Month Text>');
+
+            // last year
+
+            StartDate := CALCDATE('<-CY-1Y>', WORKDATE());
+            EndDate := CALCDATE('<CY>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[6, 1] := recItem."Sales (Qty.)";
+            QtyText[6] := FORMAT(StartDate, 0, '<Year4>');
+
+            StartDate := CALCDATE('<-CM>', EndDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[7, 1] := recItem."Sales (Qty.)";
+            QtyText[7] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[8, 1] := recItem."Sales (Qty.)";
+            QtyText[8] := FORMAT(StartDate, 0, '<Month Text>');
+
+            StartDate := CALCDATE('<-1M>', StartDate);
+            EndDate := CALCDATE('<CM>', StartDate);
+            recItem.SETRANGE("Date Filter", StartDate, EndDate);
+            recItem.SetRange("Location Filter", Location);
+            recItem.CALCFIELDS("Sales (Qty.)");
+            Qty[9, 1] := recItem."Sales (Qty.)";
+            QtyText[9] := FORMAT(StartDate, 0, '<Month Text>');
+        end;
+
 
         QtyTextArr[1, 1] := COPYSTR(QtyText[1] + Leading(FORMAT(Qty[1, 1]), 30, ' '), 1, 60);
         QtyTextArr[2, 1] := COPYSTR(QtyText[2] + Leading(FORMAT(Qty[2, 1]), 30, ' '), 1, 60);
@@ -210,9 +295,14 @@ page 80402 "BOR Req. Work. Loc. FactBox"
     end;
 
     var
-        Item: Record Item;
+        recItem: Record Item;
 
+
+        recStockKeepingUnit: Record "Stockkeeping Unit";
         Location: Code[10];
+        VariantCode: Code[10];
+
+        Inventory: Decimal;
         Qty: array[9, 1] of Decimal;
         QtyText: array[9] of Text[30];
         StartDate: Date;
@@ -221,9 +311,10 @@ page 80402 "BOR Req. Work. Loc. FactBox"
         Text001: Label 'Tekstens længde %1 er længere end den tilladte længde %2';
         QtyTextArr: array[9, 1] of Text[60];
 
-    procedure SetLocation(NewLocation: Code[10])
+    procedure SetLocation(NewLocation: Code[10]; NewVariant: Code[10])
     begin
         Location := NewLocation;
+        VariantCode := NewVariant;
     end;
 
     local procedure ShowDetails()
