@@ -120,6 +120,8 @@ page 80402 "BOR Req. Work. Loc. FactBox"
     trigger OnAfterGetCurrRecord()
     begin
 
+        //Stockkeeping Unit (5700)
+
         Item.GET(Rec."No.");
         Item.SETRANGE("Date Filter");
         Item.SetRange("Location Filter", Location);
